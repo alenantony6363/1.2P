@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Concepts Example</title>
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+  // a. String methods
+  const topic = "Programming languages are fascinating!";
+  document.getElementById("output").innerHTML += "String Length: " + topic.length + "<br>";
+  document.getElementById("output").innerHTML += "Uppercase: " + topic.toUpperCase() + "<br>";
+  document.getElementById("output").innerHTML += "Lowercase: " + topic.toLowerCase() + "<br>";
+  document.getElementById("output").innerHTML += "Substring: " + topic.substring(13, 23) + "<br>";
+  document.getElementById("output").innerHTML += "Index of 'fascinating': " + topic.indexOf("fascinating") + "<br>";
+
+  // b. Number methods
+  const goldenRatio = 1.61803;
+  document.getElementById("output").innerHTML += "Fixed to 3 decimal places: " + goldenRatio.toFixed(3) + "<br>";
+  document.getElementById("output").innerHTML += "Rounded down: " + Math.floor(goldenRatio) + "<br>";
+  document.getElementById("output").innerHTML += "Ceiling value: " + Math.ceil(goldenRatio) + "<br>";
+  document.getElementById("output").innerHTML += "Exponential notation: " + goldenRatio.toExponential(3) + "<br>";
+  document.getElementById("output").innerHTML += "Minimum value: " + Math.min(4, 7, 2, 9, 1) + "<br>";
+
+  // c. Array methods
+  const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+  document.getElementById("output").innerHTML += "Array Length: " + colors.length + "<br>";
+  document.getElementById("output").innerHTML += "Joined as string: " + colors.join(', ') + "<br>";
+  document.getElementById("output").innerHTML += "First item: " + colors[0] + "<br>";
+  colors.push('orange');
+  document.getElementById("output").innerHTML += "Pushed 'orange': " + colors + "<br>";
+  document.getElementById("output").innerHTML += "Popped item: " + colors.pop() + "<br>";
+
+  // d. Date methods
+  const today = new Date();
+  document.getElementById("output").innerHTML += "Current Date: " + today + "<br>";
+  document.getElementById("output").innerHTML += "Year: " + today.getFullYear() + "<br>";
+  document.getElementById("output").innerHTML += "Month: " + today.getMonth() + "<br>";
+  document.getElementById("output").innerHTML += "Day: " + today.getDay() + "<br>";
+  document.getElementById("output").innerHTML += "Hours: " + today.getHours() + "<br>";
+
+  // e. Function methods
+  function introduce(name) {
+    return "Hello, my name is " + name + ".";
+  }
+  document.getElementById("output").innerHTML += introduce("ALEN") + "<br>";
+
+  function multiply(base, factor) {
+    return base * factor;
+  }
+  document.getElementById("output").innerHTML += "Product: " + multiply(5, 4) + "<br>";
+
+</script>
+
+</body>
+</html>
+
